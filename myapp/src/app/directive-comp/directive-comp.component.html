@@ -1,0 +1,40 @@
+<h3>*NGIF Example</h3>
+
+<!-- using condtion in template -->
+<div *ngIf="show">
+    <p>Structural Directive NGIF</p>
+    <p>Show this para if value if true</p>
+</div>
+
+<!-- using else part -->
+<h3>*NGIF with else part</h3>
+<div *ngIf="show; else elseblock">
+    <p>This is my para two</p>
+</div>
+
+<!-- template referece variable-->
+<!-- The `<ng-template #elseblock>` is defining a template reference variable named "elseblock". This
+template is used as the else block for the *ngIf directive in Angular. If the condition in the *ngIf
+directive is false, then the content inside this template will be rendered. In this case, it
+displays a paragraph saying "This is my para. Show this para if value if false." -->
+<ng-template #elseblock>
+    <div>
+        <p>This is my para. Show this para if value if false.</p>
+    </div>
+</ng-template>
+
+<hr>
+
+<h3>*NGFOR Example</h3>
+<!-- using for loop in template -->
+<div>
+    <table border="1">
+        <tr *ngFor="let i of players">
+            <td>{{i.pname}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.runs}}</td>
+            <td>{{i.team}}</td>
+        </tr>
+    </table>
+</div>
+

@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global cass is applied to the component which does not having css */
+h3 {
+    color: rebeccapurple;
+    text-align: center;
+}

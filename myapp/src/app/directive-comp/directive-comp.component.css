@@ -1,0 +1,18 @@
+h3 {
+    color: rgb(61, 61, 182);
+    text-align: center;
+}
+
+div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+table {
+    border: 1px solid black;
+    text-align: center;
+    
+}
+table tr td {
+    width: 80px;
+}

@@ -1,0 +1,12 @@
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul li {
+    font-weight: bold;
+    font-size: 20px;
+}

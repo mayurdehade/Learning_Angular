@@ -1,0 +1,53 @@
+<input type="text" name="username" placeholder="Enter Username" [(ngModel)]="username">
+&nbsp;&nbsp;
+<button (click)="getData()">Get Data</button>
+&nbsp;&nbsp;
+<button (click)="getAllData()">Get All Data</button>
+
+<br><br>
+
+<div *ngIf="data">
+    <table border="1" style="width:100%; text-align: left;">
+        <tbody>
+            <tr>
+                <td>Login</td>
+                <td>{{ data.login }}</td>
+            </tr>
+            <tr>
+                <td>Bio</td>
+                <td>{{ data.bio }}</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>{{ data.name }}</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>{{ data.location }}</td>
+            </tr>
+            <tr>
+                <td>Public Repositories</td>
+                <td>{{ data.public_repos }}</td>
+            </tr>
+            <tr>
+                <td>Followers</td>
+                <td>{{ data.followers }}</td>
+            </tr>
+            <tr>
+                <td>Following</td>
+                <td>{{ data.following }}</td>
+            </tr>
+            <tr>
+                <td>Created At</td>
+                <td>{{ data.created_at | date }}</td>
+            </tr>
+            <tr>
+                <td>Updated At</td>
+                <td>{{ data.updated_at | date }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>{{ data | json }}</p>
+
+</div>

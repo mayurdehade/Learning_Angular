@@ -1,0 +1,33 @@
+.success 
+{
+    color: green;
+    text-align: center;
+}
+
+.denger 
+{
+    color: red;
+    text-align: center;
+}
+
+.warning
+{
+    color: yellow;
+    text-align: center;
+}
+
+.primary 
+{
+    color: blue;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    height: 200px;
+    margin: 20px 50px;
+}
+
+div {
+    text-align: center;
+}

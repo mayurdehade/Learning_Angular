@@ -1,0 +1,48 @@
+<h3>Data Binding Example</h3>
+<hr>
+
+<h3>1. Apply Style Binding</h3>
+<!-- Dynamically means runtime -->
+<!-- [style.css-property="ts"] - property binding -->
+<!-- In style binding only one property is used -->
+<p [style.color]="mycolor">Apply style dynamically to html element using style binding</p>
+
+<!-- ngStyle is used for multiple style property -->
+<!-- [ngStyle]="object" key value pair-->
+<p [ngStyle]="styleObj">Apply multiple styles using style binding</p>
+
+<hr>
+
+<h3>2. Apply Class Binding</h3>
+<p [class]="myclass">Apply class styles dynamically to html element using class binding</p>
+
+<p [class]="myclass2">Apply Warning Color</p>
+<p [class]="myclass3">Apply Danger Color</p>
+<p [class]="myclass4">Apply Primary Color</p>
+
+<hr>
+
+<h3>3. Apply Property Binding</h3>
+
+<img [src]="imgPath">
+<img [src]="imgPath2">
+<img [src]="imgPath3">
+
+<h1 [innerHTML]="txt"></h1>
+<input type="text" [value]="txt1">
+
+<hr>
+<h3>Two Way Data Binding</h3>
+<div style="text-align: center;">
+    <input type="text" placeholder="Enter your name" [(ngModel)]="modelVal">
+    <h4>Your Name:- {{modelVal}}</h4>
+</div>
+
+<hr>
+<h3>Two Way Data Binding Example</h3>
+<div>
+    <input type="number" [(ngModel)]="a">
+    <br><br>
+    <input type="number" [(ngModel)]="b">
+    <p>Answer: {{a+b}}</p>
+</div>

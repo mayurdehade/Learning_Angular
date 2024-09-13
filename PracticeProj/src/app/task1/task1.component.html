@@ -1,0 +1,14 @@
+<h3>Select a value: </h3>
+<div class="container1">
+    <select #drop>
+        <option *ngFor="let num of arr" [value]="num">{{ num }}</option>
+    </select>
+    <button (click)="getSelectedValue()">Get Table</button>
+</div>
+<br><br>
+<div class="container2" *ngIf="val">
+    <div *ngFor="let n of arr.slice(0, val)">
+        <h3>Table of {{n}}:</h3>
+        <p *ngFor="let i of arr">{{n*i}}</p>
+    </div>
+</div>

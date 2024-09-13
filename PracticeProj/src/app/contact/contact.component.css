@@ -1,0 +1,17 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    margin-top: 80px;
+    text-align: center;
+    color: crimson;
+}
+
+div {
+    display: flex;
+    justify-content: space-evenly;
+}
+p {
+    font-size: 20px;
+    font-weight: bold;
+}

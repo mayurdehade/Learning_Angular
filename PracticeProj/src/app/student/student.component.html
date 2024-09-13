@@ -1,0 +1,17 @@
+<h2>Student Information</h2>
+<hr>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Marks</th>
+        <th>Stream</th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.name}}</td>
+        <td>{{student.rno}}</td>
+        <td>{{student.marks}}</td>
+        <td>{{student.stream}}</td>
+    </tr>
+</table>
+<hr>
