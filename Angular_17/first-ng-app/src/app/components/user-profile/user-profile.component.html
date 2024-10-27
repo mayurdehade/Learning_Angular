@@ -1,0 +1,52 @@
+<h1>This is user profile</h1>
+<!-- {{}} interpolation (two way binding) -->
+
+<!-- toUpperCase() for upper case -->
+<h3>Name: {{name.toUpperCase()}}, Status: {{status}}, Salary: {{salary}}</h3>
+
+<!-- property binding [property]="value" -->
+<button [disabled]="isButtonDisable">Click Me</button>
+
+<!-- Event binding (event)="" -->
+<h2>Input Value: {{inputVal}}</h2>
+<input type="text" [value]="inputVal" (input)="onChange($event)">
+
+<br><br>
+
+<!-- two way data binding [(ngModel)]="" -->
+<input type="text" [(ngModel)]="inputValue">
+<h3>Your Input Value Is: {{inputValue}}</h3>
+
+<!-- iterator @for (Angular 17) -->
+
+<div>
+    <!-- item of items; track unique value -->
+    <!-- @for (user of users; track user.name) {
+        <h4>Name: {{user.name}}, salary: {{user.salary}}</h4>
+    } -->
+
+    @for (user of users; track user.name) {
+        <!-- if else -->
+        @if (user.salary > 10000) {
+            <h4>Name: {{user.name}}, salary: {{user.salary}}</h4>
+        
+        }
+        @else {
+            <h4>Name: {{user.name}}, salary: hidden</h4>
+        }
+    }
+</div> 
+
+<hr>
+
+<!-- using directives (old)
+-> directive is a built in class which help to change the behaviour of element -->
+<!-- two types of directives 1. Structural 2. Attibute -->
+<div *ngFor="let user of users">
+    <!-- if else condition -->
+    <h4 *ngIf="user.salary > 10000; else elseBlock">Name: {{user.name}}, salary: {{user.salary}}</h4>
+    <!-- else block -->
+    <ng-template #elseBlock>
+        <h4>Name: {{user.name}}, salary: hidden</h4>
+    </ng-template>
+</div>
